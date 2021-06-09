@@ -1,0 +1,25 @@
+ # check if the  user is there or not
+ # then add the user,skip if user is already there,
+
+ ## Imperative                        ## Declarative
+
+ id sample                               user :
+  if [ $? -ne 0 ]; then                   name : sample
+   useradd sample
+  fi
+
+## username=$1
+## user_id=$2
+
+# if [ ! -z "$username" ]; then
+    id sample                              user :
+    if [ $? -ne 0 ]; then                   name : sample
+    useradd sample                       user_id: 2000
+ fi                                               discription : "Sample user"
+    if  [ ! -z "$user_id" ]; then
+    user_id=$(id -u sample)
+    if [ $user_id ]; then
+
+    fi
+ fi
+ ## -z = if user is empty or not,, ! = not
